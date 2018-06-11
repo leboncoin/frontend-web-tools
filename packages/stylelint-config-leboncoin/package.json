@@ -1,0 +1,21 @@
+{
+  "name": "stylelint-config-leboncoin",
+  "version": "1.0.4",
+  "description": "Leboncoin's frontend stylelint shareable config",
+  "main": "index.js",
+  "keywords": [
+    "stylelint",
+    "stylelint-config",
+    "css"
+  ],
+  "author": "leboncoin",
+  "dependencies": {
+    "stylelint": "7.11.1",
+    "stylelint-config-standard": "16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leboncoin/frontend-web-tools/tree/master/packages/stylelint-config-leboncoin"
+  },
+  "license": "MIT"
+}
