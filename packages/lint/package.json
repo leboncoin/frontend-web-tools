@@ -1,0 +1,20 @@
+{
+  "name": "@leboncoin/lint",
+  "version": "1.0.8",
+  "description": "Leboncoin's front lint command",
+  "bin": {
+    "lint": "bin/lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leboncoin/frontend-web-tools/tree/master/packages/lint"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "leboncoin",
+  "license": "MIT",
+  "dependencies": {
+    "package-json-validator": "0.6.1"
+  }
+}

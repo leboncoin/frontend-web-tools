@@ -1,0 +1,17 @@
+{
+  "name": "@leboncoin/npmrc",
+  "version": "1.0.4",
+  "description": "Creates an .npmrc in the project's root",
+  "scripts": {
+    "postinstall": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leboncoin/frontend-web-tools/tree/master/packages/npmrc"
+  },
+  "author": "leboncoin",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

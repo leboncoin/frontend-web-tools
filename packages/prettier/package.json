@@ -1,0 +1,20 @@
+{
+  "name": "@leboncoin/prettier",
+  "version": "1.0.2",
+  "description": "Leboncoin's Front prettier config",
+  "scripts": {
+    "postinstall": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leboncoin/frontend-web-tools/tree/master/packages/prettier"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "leboncoin",
+  "license": "MIT",
+  "dependencies": {
+    "prettier": "1.6.1"
+  }
+}

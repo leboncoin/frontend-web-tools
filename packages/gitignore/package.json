@@ -1,0 +1,17 @@
+{
+  "name": "@leboncoin/gitignore",
+  "version": "1.0.6",
+  "description": "Put things in .gitignore you may need",
+  "scripts": {
+    "postinstall": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leboncoin/frontend-web-tools/tree/master/packages/gitignore"
+  },
+  "author": "leboncoin",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

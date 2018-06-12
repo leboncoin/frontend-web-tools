@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+echo "==== Linting of package.json ===="
+pjv package.json --warnings
+
+echo "==== Linting of js and json files ===="
+eslint \
+  --quiet \
+  --ignore-path .gitignore \
+  --ignore-pattern flow-typed \
+  --ext .js \
+  --ext .json \
+  .
