@@ -1,0 +1,14 @@
+{
+  "name": "@leboncoin/editorconfig",
+  "version": "1.0.10",
+  "description": "Leboncoin's front web site shareable editorconfig",
+  "scripts": {
+    "postinstall": "./index.js"
+  },
+  "author": "leboncoin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leboncoin/frontend-web-tools/tree/master/packages/editorconfig"
+  },
+  "license": "MIT"
+}
