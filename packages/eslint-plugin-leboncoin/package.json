@@ -1,0 +1,24 @@
+{
+  "name": "eslint-plugin-leboncoin",
+  "version": "0.1.3",
+  "description": "Leboncoin custom ESLint rules",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "Ayoub Adib <ayoub.adib@schibsted.com>",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "devDependencies": {
+    "eslint": "~3.9.1",
+    "mocha": "^3.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leboncoin/frontend-web-tools/tree/master/packages/eslint-plugin-leboncoin"
+  },
+  "license": "MIT"
+}
