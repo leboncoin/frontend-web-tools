@@ -10,5 +10,8 @@
     "type": "git",
     "url": "https://github.com/leboncoin/frontend-web-tools/tree/master/packages/editorconfig"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT"
 }
