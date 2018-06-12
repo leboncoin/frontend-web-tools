@@ -1,6 +1,6 @@
 {
   "name": "@leboncoin/internal-dev",
-  "version": "2.0.18",
+  "version": "2.0.19",
   "description": "Leboncoin's front web site module for development",
   "repository": {
     "type": "git",
@@ -12,17 +12,17 @@
     "access": "public"
   },
   "dependencies": {
+    "@leboncoin/editorconfig": "1.0.9",
+    "@leboncoin/gitignore": "1.0.7",
+    "@leboncoin/lint": "1.0.9",
+    "@leboncoin/npmrc": "1.0.5",
+    "@leboncoin/prettier": "1.0.3",
     "commitizen": "2.9.6",
     "cz-customizable": "5.2.0",
     "cz-customizable-ghooks": "leboncoin/cz-customizable-ghooks",
     "eslint-config-leboncoin": "1.1.8",
     "husky": "0.14.3",
     "jsonlint": "1.6.2",
-    "@leboncoin/editorconfig": "1.0.9",
-    "@leboncoin/gitignore": "1.0.6",
-    "@leboncoin/lint": "1.0.8",
-    "@leboncoin/npmrc": "1.0.4",
-    "@leboncoin/prettier": "1.0.2",
     "lint-staged": "4.1.3",
     "stylelint-config-leboncoin": "1.0.4",
     "textlint": "8.2.1",
