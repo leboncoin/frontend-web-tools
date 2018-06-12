@@ -1,6 +1,6 @@
 {
   "name": "@leboncoin/editorconfig",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Leboncoin's front web site shareable editorconfig",
   "scripts": {
     "postinstall": "./index.js"
