@@ -1,6 +1,6 @@
 {
   "name": "@leboncoin/internal-dev",
-  "version": "2.0.20",
+  "version": "2.0.21",
   "description": "Leboncoin's front web site module for development",
   "repository": {
     "type": "git",
@@ -13,9 +13,9 @@
   },
   "dependencies": {
     "@leboncoin/editorconfig": "1.0.12",
-    "@leboncoin/gitignore": "1.0.7",
+    "@leboncoin/gitignore": "1.0.8",
     "@leboncoin/lint": "1.0.9",
-    "@leboncoin/npmrc": "1.0.5",
+    "@leboncoin/npmrc": "1.0.6",
     "@leboncoin/prettier": "1.0.3",
     "commitizen": "2.9.6",
     "cz-customizable": "5.2.0",
