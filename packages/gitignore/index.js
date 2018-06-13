@@ -9,7 +9,6 @@ const patternsToIgnore = [
   'node_modules',
   '.editorconfig',
   'npm-debug.log',
-  '.npmrc',
   '.prettierignore',
   'prettier.config.js',
 ]
