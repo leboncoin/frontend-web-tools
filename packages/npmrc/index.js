@@ -15,8 +15,8 @@ if (path.dirname(source) === gitRoot) {
 console.log(`@leboncoin/npmrc: Will create the .npmrc file (${dest})`)
 
 if (fs.existsSync(dest)) {
-  console.log('@leboncoin/npmrc: .npmrc exists, deleting it.')
-  fs.unlinkSync(dest)
+  console.log('@leboncoin/npmrc: .npmrc exists, exit.')
+  process.exit(0)
 }
 
 console.log('@leboncoin/npmrc: Create the .npmrc file.')
