@@ -1,10 +1,8 @@
 #!/usr/bin/env node
 const fs = require('fs')
 const path = require('path')
-const execSync = require('child_process').execSync
 const source = path.join(__dirname, '.editorconfig')
-const gitRoot = execSync('git rev-parse --show-toplevel').toString().trim()
-const dest = path.join(gitRoot, '.editorconfig')
+const dest = path.join(process.env.INIT_CWD, '.editorconfig')
 
 if (source === dest) {
   console.log('@leboncoin/editorconfig: Can\'t copy .editorconfig because ' +
