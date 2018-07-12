@@ -1,6 +1,6 @@
 {
   "name": "@leboncoin/root-path",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Determine an app's root path",
   "main": "index.js",
   "author": "leboncoin",

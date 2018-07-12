@@ -1,6 +1,6 @@
 {
   "name": "@leboncoin/prettier",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Leboncoin's Front prettier config",
   "scripts": {
     "postinstall": "./index.js"

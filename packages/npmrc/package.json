@@ -1,6 +1,6 @@
 {
   "name": "@leboncoin/npmrc",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Creates an .npmrc in the project's root",
   "scripts": {
     "postinstall": "./index.js"

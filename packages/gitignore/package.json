@@ -1,6 +1,6 @@
 {
   "name": "@leboncoin/gitignore",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Put things in .gitignore you may need",
   "scripts": {
     "postinstall": "./index.js"
