@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 const fs = require('fs')
 const path = require('path')
+const rootPath = require('@leboncoin/root-path')
 const source = path.join(__dirname, '.editorconfig')
-const dest = path.join(process.env.INIT_CWD, '.editorconfig')
+const dest = path.join(rootPath, '.editorconfig')
 
 if (source === dest) {
   console.log('@leboncoin/editorconfig: Can\'t copy .editorconfig because ' +

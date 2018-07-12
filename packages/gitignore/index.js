@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 const fs = require('fs')
 const path = require('path')
-const execSync = require('child_process').execSync
-const gitRoot = execSync('git rev-parse --show-toplevel').toString().trim()
+const rootPath = require('@leboncoin/root-path')
 const source = path.join(__dirname, '.gitignore')
-const dest = path.join(gitRoot, '.gitignore')
+const dest = path.join(rootPath, '.gitignore')
 const patternsToIgnore = [
   'node_modules',
   '.editorconfig',

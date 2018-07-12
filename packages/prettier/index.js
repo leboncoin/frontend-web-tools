@@ -2,12 +2,11 @@
 
 const fs = require('fs')
 const path = require('path')
-const execSync = require('child_process').execSync
-const gitRoot = execSync('git rev-parse --show-toplevel').toString().trim()
+const rootPath = require('@leboncoin/root-path')
 
 function copy (sourceFile) {
   const source = path.join(__dirname, sourceFile)
-  const dest = path.join(gitRoot, sourceFile)
+  const dest = path.join(rootPath, sourceFile)
 
   if (path.join(__dirname, sourceFile) === dest) {
     console.log('@leboncoin/prettier: source and destination files ' +

@@ -15,6 +15,7 @@
   "author": "leboncoin",
   "license": "MIT",
   "dependencies": {
+    "@leboncoin/root-path": "0.0.1",
     "prettier": "1.6.1"
   }
 }

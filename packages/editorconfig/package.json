@@ -13,5 +13,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@leboncoin/root-path": "0.0.1"
+  }
 }

@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 const fs = require('fs')
 const path = require('path')
-const execSync = require('child_process').execSync
+const rootPath = require('@leboncoin/root-path')
 const source = path.join(__dirname, 'npmrc')
-const gitRoot = execSync('git rev-parse --show-toplevel').toString().trim()
-const dest = path.join(gitRoot, '.npmrc')
+const dest = path.join(rootPath, '.npmrc')
 
 if (path.dirname(source) === gitRoot) {
   console.log('@leboncoin/npmrc: Can\'t copy .npmrc because ' +
