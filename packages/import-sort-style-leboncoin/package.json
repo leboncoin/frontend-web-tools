@@ -1,0 +1,21 @@
+{
+  "name": "import-sort-style-leboncoin",
+  "version": "1.0.0",
+  "description": "An import-sort style that groups and sorts by path types",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc -p src",
+    "build:watch": "tsc -p src -w"
+  },
+  "author": "leboncoin",
+  "repository": "https://github.com/leboncoin/frontend-web-tools/tree/master/packages/import-sort-style-leboncoin",
+  "license": "ISC",
+  "devDependencies": {
+    "import-sort-parser": "^5.0.0",
+    "import-sort-style": "^5.0.0",
+    "ts-node": "^7.0.0",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.2"
+  }
+}
