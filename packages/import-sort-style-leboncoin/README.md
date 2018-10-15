@@ -1,4 +1,4 @@
-# import-sort-style-lbc
+# import-sort-style-leboncoin
 
 A style for [import-sort](https://github.com/renke/import-sort) that is focused
 on path types.
@@ -42,11 +42,11 @@ To enable the plugin add this to your package.json :
 "importSort": {
   ".js": {
     "parser": "babylon",
-    "style": "lbc"
+    "style": "leboncoin"
   }
 }
 ```
 
-And install it with `npm install --save-dev import-sort-cli import-sort-parser-babylon import-sort-style-lbc`
+And install it with `npm install --save-dev import-sort-cli import-sort-parser-babylon import-sort-style-leboncoin`
 
 You can find plugins for VSCode, Atom, Vim, JetBrains IDE and a CLI [here](https://github.com/renke/import-sort)
