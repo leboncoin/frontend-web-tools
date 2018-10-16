@@ -137,5 +137,6 @@ module.exports = {
     'prefer-object-spread/prefer-object-spread': 'error',
     'object-shorthand': 'error',
     'complexity': ['warn'],
+    'no-param-reassign': ["warn", { "props": true }]
   },
 }
