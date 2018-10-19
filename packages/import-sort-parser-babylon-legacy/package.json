@@ -1,0 +1,38 @@
+{
+  "name": "import-sort-parser-babylon-legacy",
+  "version": "1.0.0",
+  "description": "An import-sort parser based on the JavaScript parser Babylon with decorator legacy support.",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc -p src",
+    "build:watch": "tsc -p src -w",
+    "test": "mocha --require ts-node/register --recursive \"test/**/*.ts\"",
+    "test:watch": "mocha -w --require ts-node/register --recursive \"test/**/*.ts\""
+  },
+  "author": "leboncoin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leboncoin/frontend-web-tools/tree/master/packages/import-sort-parser-babylon-legacy"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/babylon": "^6.16.3",
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.5.2",
+    "chai": "^4.0.2",
+    "import-sort-parser": "^5.0.0",
+    "mocha": "^5.2.0",
+    "ts-node": "^7.0.0",
+    "tslint": "^5.11.0",
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.0.0-beta.54",
+    "@babel/traverse": "^7.0.0-beta.54",
+    "@babel/types": "^7.0.0-beta.54",
+    "find-line-column": "^0.5.2"
+  }
+}
