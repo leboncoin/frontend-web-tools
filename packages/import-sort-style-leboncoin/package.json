@@ -1,6 +1,6 @@
 {
-  "name": "import-sort-style-leboncoin",
-  "version": "1.0.3",
+  "name": "@leboncoin/import-sort-style-leboncoin",
+  "version": "1.0.0",
   "description": "An import-sort style that groups and sorts by path types",
   "main": "lib/index.js",
   "scripts": {
@@ -17,6 +17,5 @@
     "ts-node": "^7.0.0",
     "tslint": "^5.10.0",
     "typescript": "^2.9.2"
-  },
-  "gitHead": "daa348646729aabfd9be7575f9717da4f2043d54"
+  }
 }
