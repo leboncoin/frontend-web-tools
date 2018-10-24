@@ -1,6 +1,6 @@
 {
   "name": "@leboncoin/internal-dev",
-  "version": "2.0.22",
+  "version": "2.0.23",
   "description": "Leboncoin's front web site module for development",
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
     "husky": "0.14.3",
     "jsonlint": "1.6.2",
     "lint-staged": "4.1.3",
-    "stylelint-config-leboncoin": "1.0.1",
+    "stylelint-config-leboncoin": "1.0.2",
     "textlint": "8.2.1",
     "textlint-rule-write-good": "1.6.0"
   }
