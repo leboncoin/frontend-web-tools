@@ -1,6 +1,6 @@
 {
   "name": "@leboncoin/import-sort-parser-babylon-legacy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An import-sort parser based on the JavaScript parser Babylon with decorator legacy support.",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
