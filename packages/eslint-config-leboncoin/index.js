@@ -22,6 +22,7 @@ module.exports = {
     'jasmine',
     'prefer-object-spread',
     'leboncoin',
+    'lodash',
     'sort-class-members',
   ],
   'parser': 'babel-eslint',
@@ -39,6 +40,7 @@ module.exports = {
     'plugin:leboncoin/recommended',
   ],
   'rules': {
+    'lodash/import-scope': ['error', 'method'],
     'sort-class-members/sort-class-members': [1, {
       'order': [
         '[static-properties]',

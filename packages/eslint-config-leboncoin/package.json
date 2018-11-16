@@ -19,6 +19,7 @@
     "eslint-plugin-jest": "19.0.1",
     "eslint-plugin-json": "1.2.0",
     "eslint-plugin-leboncoin": "0.1.4",
+    "eslint-plugin-lodash": "3.1.0",
     "eslint-plugin-prefer-object-spread": "1.2.1",
     "eslint-plugin-promise": "3.4.0",
     "eslint-plugin-react": "6.8.0",
