@@ -13,8 +13,8 @@
     "test": "mocha tests --recursive"
   },
   "devDependencies": {
-    "eslint": "~3.9.1",
-    "mocha": "^3.1.2"
+    "eslint": "5.9.0",
+    "mocha": "5.2.0"
   },
   "repository": {
     "type": "git",
