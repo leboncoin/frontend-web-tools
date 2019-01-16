@@ -1,151 +1,146 @@
 module.exports = {
-  'globals': {
-    'fetch': false,
-    'Headers': false,
-    'Request': false,
-    '__WEB__': true,
-    '__NODE__': true,
-    'VERSION': true,
-    '__webpack_public_path__': true,
-    'jsdom': false,
+  globals: {
+    fetch: false,
+    Headers: false,
+    Request: false,
+    __WEB__: true,
+    __NODE__: true,
+    VERSION: true,
+    __webpack_public_path__: true,
+    jsdom: false
   },
-  'env': {
-    'jest/globals': true,
+  env: {
+    "jest/globals": true
   },
-  'plugins': [
-    'babel',
-    'json',
-    'react',
-    'jest',
-    'prefer-object-spread',
-    'leboncoin',
-    'lodash',
-    'sort-class-members',
+  plugins: [
+    "babel",
+    "json",
+    "react",
+    "jest",
+    "prefer-object-spread",
+    "leboncoin",
+    "lodash",
+    "sort-class-members",
+    "fp"
   ],
-  'parser': 'babel-eslint',
-  'parserOptions': {
-    'ecmaFeatures': {
-      'jsx': true,
-      'legacyDecorators': true,
-    },
+  parser: "babel-eslint",
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+      legacyDecorators: true
+    }
   },
-  'extends': [
-    'standard',
-    'plugin:react/recommended',
-    'plugin:jest/recommended',
-    'plugin:leboncoin/recommended',
+  extends: [
+    "standard",
+    "plugin:react/recommended",
+    "plugin:jest/recommended",
+    "plugin:leboncoin/recommended"
   ],
-  'rules': {
-    'lodash/import-scope': ['error', 'method'],
-    'sort-class-members/sort-class-members': [1, {
-      'order': [
-        '[static-properties]',
-        '[static-methods]',
-        '[properties]',
-        '[arrow-function-properties]',
-        '[conventional-private-properties]',
-        'constructor',
-        '[lifecycle]',
-        '[event-handlers]',
-        '[methods]',
-        '[conventional-private-methods]',
-        '[rendering]',
-        '[render]',
-      ],
-      'groups': {
-        'lifecycle': [
-          { 'name': 'componentDidCatch' },
-          { 'name': 'componentWillMount' },
-          { 'name': 'componentDidMount' },
-          { 'name': 'componentWillReceiveProps' },
-          { 'name': 'shouldComponentUpdate' },
-          { 'name': 'componentWillUpdate' },
-          { 'name': 'componentDidUpdate' },
-          { 'name': 'componentWillUnmount' },
-        ],
-        'event-handlers': [
-          {
-            'name': '/handle.+/',
-            'type': 'method',
-          },
-          {
-            'name': '/on.+/',
-            'type': 'method',
-          },
-        ],
-        'rendering': [
-          {
-            'name': '/render.+/',
-            'type': 'method',
-          },
-        ],
-        'render': [
-          {
-            'name': 'render',
-            'type': 'method',
-          },
-        ],
-      },
-      'accessorPairPositioning': 'getThenSet',
-    }],
-    'react/jsx-curly-spacing': [
-      'error',
-      'never',
-    ],
-    'react/jsx-tag-spacing': [
-      'error',
-    ],
-    'react/no-danger': [
-      'error',
-    ],
-    'react/no-unescaped-entities': 0,
-    'react/no-deprecated': 0,
-    'react/jsx-no-target-blank': 1, // TODO: Error instead of warning
-    'react/jsx-key': 1, // TODO: Error instead of warning
-    'react/prop-types': 1, // TODO: Error instead of warning
-    'react/no-children-prop': 0,
-    'camelcase': 'off',
-    'comma-dangle': [
-      'error',
+  rules: {
+    "lodash/import-scope": ["error", "method"],
+    "sort-class-members/sort-class-members": [
+      1,
       {
-        'arrays': 'always-multiline',
-        'objects': 'always-multiline',
-        'imports': 'always-multiline',
-        'exports': 'always-multiline',
-        'functions': 'never',
-      },
+        order: [
+          "[static-properties]",
+          "[static-methods]",
+          "[properties]",
+          "[arrow-function-properties]",
+          "[conventional-private-properties]",
+          "constructor",
+          "[lifecycle]",
+          "[event-handlers]",
+          "[methods]",
+          "[conventional-private-methods]",
+          "[rendering]",
+          "[render]"
+        ],
+        groups: {
+          lifecycle: [
+            { name: "componentDidCatch" },
+            { name: "componentWillMount" },
+            { name: "componentDidMount" },
+            { name: "componentWillReceiveProps" },
+            { name: "shouldComponentUpdate" },
+            { name: "componentWillUpdate" },
+            { name: "componentDidUpdate" },
+            { name: "componentWillUnmount" }
+          ],
+          "event-handlers": [
+            {
+              name: "/handle.+/",
+              type: "method"
+            },
+            {
+              name: "/on.+/",
+              type: "method"
+            }
+          ],
+          rendering: [
+            {
+              name: "/render.+/",
+              type: "method"
+            }
+          ],
+          render: [
+            {
+              name: "render",
+              type: "method"
+            }
+          ]
+        },
+        accessorPairPositioning: "getThenSet"
+      }
     ],
-    'default-case': 'error',
-    'jsx-quotes': 'error',
-    'max-len': 'off',
-    'babel/no-invalid-this': 'error',
-    'no-return-await': 'error',
-    'no-var': 'error',
-    'no-use-before-define': 'error',
-    'prefer-arrow-callback': 'error',
-    'prefer-const': [
-      'error',
+    "react/jsx-curly-spacing": ["error", "never"],
+    "react/jsx-tag-spacing": ["error"],
+    "react/no-danger": ["error"],
+    "react/no-unescaped-entities": 0,
+    "react/no-deprecated": 0,
+    "react/jsx-no-target-blank": 1, // TODO: Error instead of warning
+    "react/jsx-key": 1, // TODO: Error instead of warning
+    "react/prop-types": 1, // TODO: Error instead of warning
+    "react/no-children-prop": 0,
+    camelcase: "off",
+    "comma-dangle": [
+      "error",
       {
-        'destructuring': 'all',
-        'ignoreReadBeforeAssign': true,
-      },
+        arrays: "always-multiline",
+        objects: "always-multiline",
+        imports: "always-multiline",
+        exports: "always-multiline",
+        functions: "never"
+      }
     ],
-    'prefer-rest-params': 'error',
-    'prefer-spread': 'error',
-    'radix': 'error',
-    'react/display-name': 'off',
-    'object-curly-spacing': [
-      'error',
-      'always',
+    "default-case": "error",
+    "jsx-quotes": "error",
+    "max-len": "off",
+    "babel/no-invalid-this": "error",
+    "no-return-await": "error",
+    "no-var": "error",
+    "no-use-before-define": "error",
+    "prefer-arrow-callback": "error",
+    "prefer-const": [
+      "error",
+      {
+        destructuring: "all",
+        ignoreReadBeforeAssign: true
+      }
     ],
-    'prefer-object-spread/prefer-object-spread': 'error',
-    'object-shorthand': 'error',
-    'generator-star-spacing': 0,
-    'prefer-promise-reject-errors': 0,
-    'jest/valid-expect-in-promise': 0,
-    'jest/no-alias-methods': 0,
-    'standard/no-callback-literal': 0,
-    'complexity': ['warn'],
-    'no-param-reassign': ["warn", { "props": true }]
-  },
-}
+    "prefer-rest-params": "error",
+    "prefer-spread": "error",
+    radix: "error",
+    "react/display-name": "off",
+    "object-curly-spacing": ["error", "always"],
+    "prefer-object-spread/prefer-object-spread": "error",
+    "object-shorthand": "error",
+    "generator-star-spacing": 0,
+    "prefer-promise-reject-errors": 0,
+    "jest/valid-expect-in-promise": 0,
+    "jest/no-alias-methods": 0,
+    "fp/no-delete": "error",
+    "standard/no-callback-literal": 0,
+    complexity: ["warn"],
+    "no-param-reassign": ["warn", { props: true }]
+  }
+};
