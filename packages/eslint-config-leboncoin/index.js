@@ -11,15 +11,12 @@ module.exports = {
   },
   'env': {
     'jest/globals': true,
-    'jasmine': true,
   },
   'plugins': [
     'babel',
     'json',
     'react',
-    'flowtype',
     'jest',
-    'jasmine',
     'prefer-object-spread',
     'leboncoin',
     'lodash',
@@ -29,14 +26,13 @@ module.exports = {
   'parserOptions': {
     'ecmaFeatures': {
       'jsx': true,
+      'legacyDecorators': true,
     },
   },
   'extends': [
     'standard',
     'plugin:react/recommended',
-    'plugin:flowtype/recommended',
     'plugin:jest/recommended',
-    'plugin:jasmine/recommended',
     'plugin:leboncoin/recommended',
   ],
   'rules': {
@@ -102,6 +98,12 @@ module.exports = {
     'react/no-danger': [
       'error',
     ],
+    'react/no-unescaped-entities': 0,
+    'react/no-deprecated': 0,
+    'react/jsx-no-target-blank': 1, // TODO: Error instead of warning
+    'react/jsx-key': 1, // TODO: Error instead of warning
+    'react/prop-types': 1, // TODO: Error instead of warning
+    'react/no-children-prop': 0,
     'camelcase': 'off',
     'comma-dangle': [
       'error',
@@ -138,6 +140,11 @@ module.exports = {
     ],
     'prefer-object-spread/prefer-object-spread': 'error',
     'object-shorthand': 'error',
+    'generator-star-spacing': 0,
+    'prefer-promise-reject-errors': 0,
+    'jest/valid-expect-in-promise': 0,
+    'jest/no-alias-methods': 0,
+    'standard/no-callback-literal': 0,
     'complexity': ['warn'],
     'no-param-reassign': ["warn", { "props": true }]
   },
