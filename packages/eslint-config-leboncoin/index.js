@@ -100,9 +100,7 @@ module.exports = {
     ],
     'react/no-unescaped-entities': 0,
     'react/no-deprecated': 0,
-    'react/jsx-no-target-blank': 1, // TODO: Error instead of warning
-    'react/jsx-key': 1, // TODO: Error instead of warning
-    'react/prop-types': 1, // TODO: Error instead of warning
+    'react/jsx-no-target-blank': 0, // We already have a custom rule for that
     'react/no-children-prop': 0,
     'camelcase': 'off',
     'comma-dangle': [
@@ -140,12 +138,9 @@ module.exports = {
     ],
     'prefer-object-spread/prefer-object-spread': 'error',
     'object-shorthand': 'error',
-    'generator-star-spacing': 0,
     'prefer-promise-reject-errors': 0,
     'jest/valid-expect-in-promise': 0,
-    'jest/no-alias-methods': 0,
-    'standard/no-callback-literal': 0,
-    'complexity': ['warn'],
+    'complexity': 0,
     'no-param-reassign': ["warn", { "props": true }]
   },
 }
