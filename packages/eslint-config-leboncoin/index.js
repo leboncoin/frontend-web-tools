@@ -21,6 +21,7 @@ module.exports = {
     'leboncoin',
     'lodash',
     'sort-class-members',
+    'fp',
   ],
   'parser': 'babel-eslint',
   'parserOptions': {
@@ -138,6 +139,7 @@ module.exports = {
     ],
     'prefer-object-spread/prefer-object-spread': 'error',
     'object-shorthand': 'error',
+    'fp/no-delete': 'error',
     'prefer-promise-reject-errors': 0,
     'jest/valid-expect-in-promise': 0,
     'complexity': 0,
