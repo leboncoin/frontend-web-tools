@@ -43,7 +43,7 @@ module.exports = {
   ],
   'rules': {
     'lodash/import-scope': ['error', 'method'],
-    'sort-class-members/sort-class-members': [1, {
+    'sort-class-members/sort-class-members': [0, {
       'order': [
         '[static-properties]',
         '[static-methods]',
