@@ -12,11 +12,6 @@ module.exports = {
   'env': {
     'jest/globals': true,
   },
-  'settings': {
-    'react': {
-      'version': 'detect',
-    },
-  },
   'plugins': [
     'babel',
     'json',
@@ -36,7 +31,6 @@ module.exports = {
   },
   'extends': [
     'standard',
-    'eslint:recommended',
     'plugin:react/recommended',
     'plugin:jest/recommended',
     'plugin:leboncoin/recommended',
