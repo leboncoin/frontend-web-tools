@@ -98,7 +98,7 @@ module.exports = {
     'react/no-danger': [
       'error',
     ],
-    'react/no-unescaped-entities': 0,
+    'react/no-unescaped-entities': ['error', {'forbid': ['\'']}],
     'react/no-deprecated': 0,
     'react/jsx-no-target-blank': 0, // We already have a custom rule for that
     'react/no-children-prop': 0,
