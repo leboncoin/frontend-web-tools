@@ -7,7 +7,7 @@ const RuleTester = require('eslint').RuleTester
 
 RuleTester.setDefaultConfig({
   parserOptions: {
-    ecmaVersion: 8,
+    ecmaVersion: 6,
     sourceType: 'module',
   },
 })
