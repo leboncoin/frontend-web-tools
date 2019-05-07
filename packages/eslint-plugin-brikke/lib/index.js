@@ -1,8 +1,3 @@
-//------------------------------------------------------------------------------
-// Plugin Definition
-//------------------------------------------------------------------------------
-
-// import all rules in lib/rules
 module.exports.rules = {
   'no-css-dist': require('./rules/no-css-dist.js')
 }
