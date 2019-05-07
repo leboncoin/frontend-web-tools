@@ -5,10 +5,7 @@ module.exports.rules = {
 module.exports.config = {
   recommended: {
     rules: {
-      'brikke/no-css-dist': 'error',
+      'brikke/no-css-dist': ['error'],
     },
   },
 }
-
-
-
