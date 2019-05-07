@@ -5,6 +5,9 @@ RuleTester.setDefaultConfig({
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
 })
 
@@ -12,20 +15,60 @@ const ruleTester = new RuleTester()
 
 ruleTester.run('no-css-dist', rule, {
   valid: [
-    `
-    import './styles.css'
-    import '@example/dist/styles.css'
-    import '@example/package/dist/styles.css'
-    import '@example/styles.css'
-    `,
+    {
+      code: `
+import PropTypes from 'prop-types'
+import React from 'react'
+
+import styles from './styles.scss'
+
+const Button = ({ children }) => {
+  return (
+    <button
+      className={classNames(styles.Button)}
+    >
+      {children}
+    </button>
+  )
+}
+
+Button.propTypes = {
+  /** Content to be included in the button */
+  children: PropTypes.node.isRequired,
+}
+
+export default Button`,
+    },
   ],
 
   invalid: [
     {
-      code: `import '@brikke/button/dist/styles.css'`,
+      code: `
+import PropTypes from 'prop-types'
+import React from 'react'
+
+import styles from './styles.scss'
+import otherStyles from '@brikke/other-component/dist/styles.css'
+
+const Button = ({ children }) => {
+  return (
+    <button
+      className={classNames(styles.Button, otherStyles.Button)}
+    >
+      {children}
+    </button>
+  )
+}
+
+Button.propTypes = {
+  /** Content to be included in the button */
+  children: PropTypes.node.isRequired,
+}
+
+export default Button`,
       errors: [
         {
-          message: 'Unexpected "@brikke/button/dist/styles.css": do not import CSS from @brikke here.',
+          message: 'Unexpected "@brikke/other-component/dist/styles.css": do not import CSS from @brikke here.',
           type: 'ImportDeclaration',
         },
       ],
