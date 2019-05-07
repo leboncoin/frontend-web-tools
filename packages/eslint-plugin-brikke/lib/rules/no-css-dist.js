@@ -12,11 +12,6 @@ module.exports = {
 
   create: context => ({
     ImportDeclaration (node) {
-      if (
-        !node.source ||
-        (node.source && node.source.value && node.source.value.length === 0)
-       ) return
-
       // We check that the value of the import does not match ALL those conditions:
       // - a @brikke namespace
       // - a /dist folder
