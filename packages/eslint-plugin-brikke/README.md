@@ -36,7 +36,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "brikke/rule-name": 2
+        "brikke/rule-name": ["off|warning|error"]
     }
 }
 ```
@@ -44,8 +44,3 @@ Then configure the rules you want to use under the rules section.
 ## Supported Rules
 
 * no-css-dist
-
-
-
-
-
