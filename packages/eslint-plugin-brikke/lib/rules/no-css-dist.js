@@ -16,7 +16,7 @@ module.exports = {
       // - a @brikke namespace
       // - a /dist folder
       // - a css stylesheet
-      const regex = /^@(?=.*?\bbrikke\b)(?=.*?\bdist\b)(?=.*?\bcss\b).*$/gm
+      const regex = /^@brikke\/.+\/dist\/\w+\.css$/
       const identifier = node.source.value
       const isFromBrikke = regex.test(identifier)
 
