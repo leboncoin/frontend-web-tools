@@ -3,7 +3,7 @@
   "version": "1.0.3",
   "description": "Leboncoin's Front prettier config",
   "scripts": {
-    "postinstall": "./index.js"
+    "postinstall": "node ./index.js"
   },
   "repository": {
     "type": "git",

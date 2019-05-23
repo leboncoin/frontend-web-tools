@@ -3,7 +3,7 @@
   "version": "1.0.8",
   "description": "Put things in .gitignore you may need",
   "scripts": {
-    "postinstall": "./index.js"
+    "postinstall": "node ./index.js"
   },
   "repository": {
     "type": "git",

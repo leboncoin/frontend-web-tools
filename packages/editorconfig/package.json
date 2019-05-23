@@ -3,7 +3,7 @@
   "version": "1.0.12",
   "description": "Leboncoin's front web site shareable editorconfig",
   "scripts": {
-    "postinstall": "./index.js"
+    "postinstall": "node ./index.js"
   },
   "author": "leboncoin",
   "repository": {
