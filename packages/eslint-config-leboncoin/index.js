@@ -16,6 +16,7 @@ module.exports = {
     'babel',
     'json',
     'react',
+    'react-hooks',
     'jest',
     'prefer-object-spread',
     'leboncoin',
@@ -102,6 +103,8 @@ module.exports = {
     'react/no-deprecated': 0,
     'react/jsx-no-target-blank': 0, // We already have a custom rule for that
     'react/no-children-prop': 0,
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn'
     'camelcase': 'off',
     'comma-dangle': [
       'error',
