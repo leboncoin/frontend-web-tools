@@ -8,6 +8,7 @@ module.exports = {
     'VERSION': true,
     '__webpack_public_path__': true,
     'jsdom': false,
+    'renderWithRedux': true,
   },
   'env': {
     'jest/globals': true,
