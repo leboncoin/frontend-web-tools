@@ -27,5 +27,6 @@
     "stylelint-config-leboncoin": "1.0.2",
     "textlint": "8.2.1",
     "textlint-rule-write-good": "1.6.0"
-  }
+  },
+  "gitHead": "ad2c196019d9b3e233b73268f32dbd52ff56dc7e"
 }

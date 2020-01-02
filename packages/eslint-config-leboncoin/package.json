@@ -31,5 +31,6 @@
     "type": "git",
     "url": "https://github.com/leboncoin/frontend-web-tools/tree/master/packages/eslint-config-leboncoin"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "gitHead": "ad2c196019d9b3e233b73268f32dbd52ff56dc7e"
 }
