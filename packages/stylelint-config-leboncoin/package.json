@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-leboncoin",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Leboncoin's frontend stylelint shareable config",
   "main": "index.js",
   "keywords": [
