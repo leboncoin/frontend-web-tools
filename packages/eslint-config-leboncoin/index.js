@@ -20,9 +20,9 @@ module.exports = {
     'react-hooks',
     'jest',
     'prefer-object-spread',
-    'leboncoin',
     'lodash',
     'sort-class-members',
+    'no-constructor-bind',
   ],
   parser: 'babel-eslint',
   parserOptions: {
@@ -35,7 +35,6 @@ module.exports = {
     'standard',
     'plugin:react/recommended',
     'plugin:jest/recommended',
-    'plugin:leboncoin/recommended',
   ],
   rules: {
     'lodash/import-scope': ['error', 'method'],
@@ -98,7 +97,7 @@ module.exports = {
     'react/no-danger': ['error'],
     'react/no-unescaped-entities': ['error', { forbid: ["'"] }],
     'react/no-deprecated': 0,
-    'react/jsx-no-target-blank': 0, // We already have a custom rule for that
+    'react/jsx-no-target-blank': 'error',
     'react/no-children-prop': 0,
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
@@ -139,5 +138,7 @@ module.exports = {
     'jest/valid-expect-in-promise': 0,
     complexity: 0,
     'no-param-reassign': ['warn', { props: true }],
+    'no-constructor-bind/no-constructor-bind': 'error',
+    'no-constructor-bind/no-constructor-state': 'error',
   },
 }
