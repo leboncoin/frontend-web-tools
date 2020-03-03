@@ -20,7 +20,6 @@ module.exports = {
     'react-hooks',
     'jest',
     'prefer-object-spread',
-    'leboncoin',
     'lodash',
     'sort-class-members',
   ],
@@ -35,7 +34,6 @@ module.exports = {
     'standard',
     'plugin:react/recommended',
     'plugin:jest/recommended',
-    'plugin:leboncoin/recommended',
   ],
   rules: {
     'lodash/import-scope': ['error', 'method'],
