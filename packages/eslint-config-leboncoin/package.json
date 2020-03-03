@@ -18,6 +18,7 @@
     "eslint-plugin-jest": "23.2.0",
     "eslint-plugin-json": "2.0.1",
     "eslint-plugin-lodash": "6.0.0",
+    "eslint-plugin-no-constructor-bind": "^1.2.7",
     "eslint-plugin-node": "11.0.0",
     "eslint-plugin-prefer-object-spread": "1.2.1",
     "eslint-plugin-promise": "4.2.1",
@@ -31,8 +32,5 @@
     "url": "https://github.com/leboncoin/frontend-web-tools/tree/master/packages/eslint-config-leboncoin"
   },
   "license": "MIT",
-  "gitHead": "0aac981d7fea789f572ae91cebaa2d8e1e774e2f",
-  "devDependencies": {
-    "eslint-plugin-no-constructor-bind": "^1.2.7"
-  }
+  "gitHead": "0aac981d7fea789f572ae91cebaa2d8e1e774e2f"
 }
