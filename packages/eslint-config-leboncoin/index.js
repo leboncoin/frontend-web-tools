@@ -22,6 +22,7 @@ module.exports = {
     'prefer-object-spread',
     'lodash',
     'sort-class-members',
+    'no-constructor-bind',
   ],
   parser: 'babel-eslint',
   parserOptions: {
@@ -96,7 +97,7 @@ module.exports = {
     'react/no-danger': ['error'],
     'react/no-unescaped-entities': ['error', { forbid: ["'"] }],
     'react/no-deprecated': 0,
-    'react/jsx-no-target-blank': 0, // We already have a custom rule for that
+    'react/jsx-no-target-blank': 'error',
     'react/no-children-prop': 0,
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
@@ -137,7 +138,7 @@ module.exports = {
     'jest/valid-expect-in-promise': 0,
     complexity: 0,
     'no-param-reassign': ['warn', { props: true }],
-    'no-bind-constructor': 'error',
-    'jsx-no-target-blank': 'error',
+    'no-constructor-bind/no-constructor-bind': 'error',
+    'no-constructor-bind/no-constructor-state': 'error',
   },
 }
