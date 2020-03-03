@@ -137,5 +137,7 @@ module.exports = {
     'jest/valid-expect-in-promise': 0,
     complexity: 0,
     'no-param-reassign': ['warn', { props: true }],
+    'no-bind-constructor': 'error',
+    'jsx-no-target-blank': 'error',
   },
 }
