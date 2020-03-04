@@ -140,5 +140,6 @@ module.exports = {
     'no-param-reassign': ['warn', { props: true }],
     'no-constructor-bind/no-constructor-bind': 'error',
     'no-constructor-bind/no-constructor-state': 'error',
+    'space-before-function-paren': 1,
   },
 }
