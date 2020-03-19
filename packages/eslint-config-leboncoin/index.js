@@ -23,6 +23,7 @@ module.exports = {
     'lodash',
     'sort-class-members',
     'no-constructor-bind',
+    'import',
   ],
   parser: 'babel-eslint',
   parserOptions: {
@@ -141,5 +142,6 @@ module.exports = {
     'no-constructor-bind/no-constructor-bind': 'error',
     'no-constructor-bind/no-constructor-state': 'error',
     'space-before-function-paren': 1,
+    'import/no-extraneous-dependencies': ['error'],
   },
 }
