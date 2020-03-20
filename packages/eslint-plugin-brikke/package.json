@@ -19,5 +19,8 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "read-pkg-up": "^7.0.1"
+  }
 }

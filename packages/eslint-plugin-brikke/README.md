@@ -44,3 +44,4 @@ Then configure the rules you want to use under the rules section.
 ## Supported Rules
 
 * no-css-dist
+* no-undeclared-imports

@@ -1,15 +1,5 @@
 const rule = require('../../../lib/rules/no-css-dist')
-const RuleTester = require('eslint').RuleTester
-
-RuleTester.setDefaultConfig({
-  parserOptions: {
-    ecmaVersion: 6,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
-})
+const RuleTester = require('../../rule-tester')
 
 const ruleTester = new RuleTester()
 
