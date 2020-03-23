@@ -5,6 +5,27 @@ const isRelative = name => {
   return /^\./.test(name)
 }
 
+const isInAllDependencies = (sourceValue, allDependencies) => {
+  return allDependencies[sourceValue] !== undefined
+}
+
+const isInternal = (sourceValue, allDependencies) => {
+  const separator = '/'
+  const parts = sourceValue.split(separator)
+  const isScoped = sourceValue.startsWith('@')
+  const name = isScoped ? [parts[0], parts[1]].join(separator) : parts[0]
+  const depth = parts.length
+
+  if (!isInAllDependencies(name, allDependencies)) {
+    return false
+  }
+  if (isScoped) {
+    return depth >= 3
+  }
+
+  return depth >= 2
+}
+
 module.exports = {
   meta: {
     docs: {
@@ -57,7 +78,10 @@ module.exports = {
       if (isRelative(sourceValue)) {
         return
       }
-      if (allDependencies[sourceValue] !== undefined) {
+      if (isInAllDependencies(sourceValue, allDependencies)) {
+        return
+      }
+      if (isInternal(sourceValue, allDependencies)) {
         return
       }
 

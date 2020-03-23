@@ -14,6 +14,22 @@ ruleTester.run('no-undeclared-imports', rule, {
       options: [getOptions()],
     },
     {
+      code: "import { Handle, Range } from 'rc-slider'",
+      options: [getOptions()],
+    },
+    {
+      code: "import 'rc-slider/assets/index.css'",
+      options: [getOptions()],
+    },
+    {
+      code: "import Hello from '@brikke/hello'",
+      options: [getOptions()],
+    },
+    {
+      code: "import Hello from '@brikke/hello/dist/index.css'",
+      options: [getOptions()],
+    },
+    {
       code: "import 'lodash'",
       options: [getOptions()],
     },
@@ -47,6 +63,13 @@ ruleTester.run('no-undeclared-imports', rule, {
   invalid: [
     {
       code: "import PropTypes from 'prop-types'",
+      options: [getOptions()],
+      errors: [{
+        messageId: 'undeclaredImports',
+      }],
+    },
+    {
+      code: "import 'foo/assets/index.css'",
       options: [getOptions()],
       errors: [{
         messageId: 'undeclaredImports',

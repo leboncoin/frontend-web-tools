@@ -7,6 +7,8 @@
   },
   "peerDependencies": {
     "react": "*",
-    "lodash": "*"
+    "lodash": "*",
+    "rc-slider": "*",
+    "@brikke/hello": "*"
   }
 }
