@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-brikke",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Brikke custom ESLint rules",
   "keywords": [
     "eslint",
