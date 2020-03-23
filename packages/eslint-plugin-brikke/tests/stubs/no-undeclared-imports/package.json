@@ -1,4 +1,10 @@
 {
+  "dependencies": {
+    "ramda": "*"
+  },
+  "devDependencies": {
+    "@testing-library/react": "*"
+  },
   "peerDependencies": {
     "react": "*",
     "lodash": "*"

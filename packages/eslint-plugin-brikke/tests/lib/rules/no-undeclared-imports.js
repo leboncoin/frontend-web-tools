@@ -6,6 +6,14 @@ const ruleTester = new RuleTester()
 ruleTester.run('no-undeclared-imports', rule, {
   valid: [
     {
+      code: "import { clone } from 'ramda'",
+      options: [getOptions()],
+    },
+    {
+      code: "import { render } from '@testing-library/react'",
+      options: [getOptions()],
+    },
+    {
       code: "import 'lodash'",
       options: [getOptions()],
     },

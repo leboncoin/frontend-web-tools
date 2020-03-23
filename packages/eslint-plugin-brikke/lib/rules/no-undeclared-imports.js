@@ -29,7 +29,11 @@ module.exports = {
       const options = context.options[0] || {}
       const cwd = options.pkgDir || context.getFilename()
       const pkg = readPkgUp.sync({ cwd, normalize: false }).packageJson
-      const peerDependencies = pkg.peerDependencies || {}
+      const allDependencies = {
+        ...(pkg.dependencies || {}),
+        ...(pkg.devDependencies || {}),
+        ...(pkg.peerDependencies || {}),
+      }
       const sourceValue = node.source.value
 
       if (options.exclude && options.exclude.includes(sourceValue)) {
@@ -38,7 +42,7 @@ module.exports = {
       if (isRelative(sourceValue)) {
         return
       }
-      if (peerDependencies[sourceValue] !== undefined) {
+      if (allDependencies[sourceValue] !== undefined) {
         return
       }
 
