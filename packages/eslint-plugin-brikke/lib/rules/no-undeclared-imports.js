@@ -12,6 +12,10 @@ module.exports = {
       recommended: false,
     },
     fixable: null,
+    messages: {
+      undeclaredImports:
+        "Unexpected '{{ sourceValue }}' is imported but not declared in the leaf package.json",
+    },
     schema: [
       {
         type: 'object',
@@ -48,7 +52,7 @@ module.exports = {
 
       context.report({
         node,
-        message: "Unexpected '{{ sourceValue }}' is imported but not declared in the leaf package.json",
+        messageId: 'undeclaredImports',
         data: {
           sourceValue,
         },

@@ -39,7 +39,7 @@ ruleTester.run('no-undeclared-imports', rule, {
       code: "import PropTypes from 'prop-types'",
       options: [getOptions()],
       errors: [{
-        message: "Unexpected 'prop-types' is imported but not declared in the leaf package.json",
+        messageId: 'undeclaredImports',
       }],
     },
   ],
