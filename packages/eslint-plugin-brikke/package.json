@@ -13,7 +13,7 @@
     "test": "mocha tests --recursive"
   },
   "devDependencies": {
-    "eslint": "~3.9.1",
+    "eslint": "^5",
     "mocha": "^6.1.4"
   },
   "engines": {
