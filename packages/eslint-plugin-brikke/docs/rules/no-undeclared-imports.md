@@ -1,23 +1,32 @@
 # Forbid imports not declared in the leaf package.json (no-undeclared-imports)
 
 This rule throws an error when imports are used in the source code but not declared as
-`peerDependencies` in the package.json.
+`dependencies`, `devDependencies` or `peerDependencies` in the package.json.
 
 ## Options
 
-Throws an error for any imports not declared as `peerDependencies`:
+Throws an error for any imports not declared as `dependencies`, `devDependencies` or `peerDependencies` in the package.json.
 
 ```
 "brikke/no-undeclared-imports": ["error"]
 ```
 
-Throws an error for any imports not declared as `peerDependencies` except for `foo` and `bar`
-imports:
+Throws an error for any imports not declared as `dependencies`, `devDependencies` or `peerDependencies` except for `foo` and `bar` imports:
 
 ```
 "brikke/no-undeclared-imports": [
   "error", {
-    "exclude": ["foo", "bar"]
+    "excludedModules": ["foo", "bar"]
+  }
+]
+```
+
+Throws an error for any imports not declared as `dependencies`, `devDependencies` or `peerDependencies` except if the file being linted matches the provided minimatch pattern:
+
+```
+"brikke/no-undeclared-imports": [
+  "error", {
+    "excludedFilePatterns": ["*.spec.js", "*.stories.js"]
   }
 ]
 ```
@@ -27,7 +36,7 @@ For testing purposes or to hard code the path to the package.json:
 ```
 "brikke/no-undeclared-imports": [
   "error", {
-    "exclude": ["foo", "bar"],
+    "excludedModules": ["foo", "bar"],
     "pkgDir": "./directory/to/package-json/"
   }
 ]
