@@ -1,4 +1,5 @@
 const readPkgUp = require('read-pkg-up')
+const minimatch = require('minimatch')
 
 const isRelative = name => {
   return /^\./.test(name)
@@ -20,7 +21,8 @@ module.exports = {
       {
         type: 'object',
         properties: {
-          exclude: { type: ['array'] },
+          excludedModules: { type: ['array'] },
+          excludedFilePatterns: { type: ['array'] },
           pkgDir: { type: ['string'] },
         },
         additionalProperties: false,
@@ -31,7 +33,9 @@ module.exports = {
   create: context => ({
     ImportDeclaration (node) {
       const options = context.options[0] || {}
-      const cwd = options.pkgDir || context.getFilename()
+      const { excludedModules = [], excludedFilePatterns = [] } = options
+      const filename = context.getFilename()
+      const cwd = options.pkgDir || filename
       const pkg = readPkgUp.sync({ cwd, normalize: false }).packageJson
       const allDependencies = {
         ...(pkg.dependencies || {}),
@@ -40,7 +44,14 @@ module.exports = {
       }
       const sourceValue = node.source.value
 
-      if (options.exclude && options.exclude.includes(sourceValue)) {
+      if (excludedModules.includes(sourceValue)) {
+        return
+      }
+      if (
+        excludedFilePatterns.some(excludedFilePattern =>
+          minimatch(filename, excludedFilePattern, { matchBase: true })
+        )
+      ) {
         return
       }
       if (isRelative(sourceValue)) {

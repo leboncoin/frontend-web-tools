@@ -31,7 +31,17 @@ ruleTester.run('no-undeclared-imports', rule, {
     },
     {
       code: "import excludedModule from 'excluded-module'",
-      options: [{ ...getOptions(), exclude: ['excluded-module'] }],
+      options: [{ ...getOptions(), excludedModules: ['excluded-module'] }],
+    },
+    {
+      code: "import foo from 'bar'",
+      options: [{ ...getOptions(), excludedFilePatterns: ['*.spec.js', '*.stories.js'] }],
+      filename: 'index.spec.js',
+    },
+    {
+      code: "import foo from 'bar'",
+      options: [{ ...getOptions(), excludedFilePatterns: ['*.spec.js', '*.stories.js'] }],
+      filename: 'index.stories.js',
     },
   ],
   invalid: [
