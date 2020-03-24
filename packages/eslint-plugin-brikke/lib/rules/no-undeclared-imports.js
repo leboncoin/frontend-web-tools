@@ -1,5 +1,10 @@
+const builtin = require('module').builtinModules
 const readPkgUp = require('read-pkg-up')
 const minimatch = require('minimatch')
+
+const isBuiltin = name => {
+  return builtin.includes(name)
+}
 
 const isRelative = name => {
   return /^\./.test(name)
@@ -65,6 +70,9 @@ module.exports = {
       }
       const sourceValue = node.source.value
 
+      if (isBuiltin(sourceValue)) {
+        return
+      }
       if (excludedModules.includes(sourceValue)) {
         return
       }

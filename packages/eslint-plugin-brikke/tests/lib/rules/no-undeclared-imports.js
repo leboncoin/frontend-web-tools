@@ -45,6 +45,13 @@ ruleTester.run('no-undeclared-imports', rule, {
       code: "import foo from '../bar'",
       options: [getOptions()],
     },
+    // builtin modules
+    {
+      code:
+`import { mkdirSync, accessSync, constants } from 'fs'
+import path from 'path'`,
+      options: [{ ...getOptions() }],
+    },
     {
       code: "import excludedModule from 'excluded-module'",
       options: [{ ...getOptions(), excludedModules: ['excluded-module'] }],
