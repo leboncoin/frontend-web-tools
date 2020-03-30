@@ -3,15 +3,7 @@
 // ------------------------------------------------------------------------------
 
 const rule = require('../../../lib/rules/no-bind-constructor')
-const RuleTester = require('eslint').RuleTester
-
-RuleTester.setDefaultConfig({
-  parserOptions: {
-    ecmaVersion: 8,
-    ecmaFeatures: { experimentalObjectRestSpread: true, globalReturn: false },
-    sourceType: 'module',
-  },
-})
+const RuleTester = require('../../rule-tester')
 
 // ------------------------------------------------------------------------------
 // Tests
