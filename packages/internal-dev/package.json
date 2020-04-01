@@ -1,6 +1,6 @@
 {
   "name": "@leboncoin/internal-dev",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "description": "Leboncoin's front web site module for development",
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
     "@leboncoin/gitignore": "1.0.9",
     "@leboncoin/lint": "1.0.9",
     "@leboncoin/npmrc": "1.0.7",
-    "@leboncoin/prettier": "2.0.0",
+    "@leboncoin/prettier": "2.1.0",
     "commitizen": "2.9.6",
     "cz-customizable": "5.2.0",
     "cz-customizable-ghooks": "leboncoin/cz-customizable-ghooks",
