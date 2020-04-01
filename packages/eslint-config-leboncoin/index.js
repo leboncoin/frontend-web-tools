@@ -23,6 +23,7 @@ module.exports = {
     'lodash',
     'sort-class-members',
     'no-constructor-bind',
+    'testing-library',
   ],
   parser: 'babel-eslint',
   parserOptions: {
@@ -35,6 +36,8 @@ module.exports = {
     'standard',
     'plugin:react/recommended',
     'plugin:jest/recommended',
+    'plugin:testing-library/react',
+    'plugin:testing-library/recommended',
   ],
   rules: {
     'lodash/import-scope': ['error', 'method'],

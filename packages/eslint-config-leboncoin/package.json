@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-leboncoin",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Leboncoin's frontend eslint shareable config",
   "main": "index.js",
   "keywords": [
@@ -25,7 +25,8 @@
     "eslint-plugin-react": "7.18.3",
     "eslint-plugin-react-hooks": "2.5.0",
     "eslint-plugin-sort-class-members": "1.6.0",
-    "eslint-plugin-standard": "4.0.1"
+    "eslint-plugin-standard": "4.0.1",
+    "eslint-plugin-testing-library": "3.0.1"
   },
   "repository": {
     "type": "git",
