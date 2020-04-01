@@ -17,4 +17,6 @@ The contributing workflow of this repository is:
 
 * Edit files **but don't change the package version, lerna will do it for you**
 * Create commits **but don't create tags, lerna will do it for you**
-* Publish packages with: `lerna publish --exact`
+* Submit the pull request
+* When the pull request is approved, rebase and merge your branch
+* Publish packages with: `lerna publish --exact` (learna will create tags and commit for you)
