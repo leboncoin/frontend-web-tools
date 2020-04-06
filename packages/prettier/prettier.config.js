@@ -1,7 +1,7 @@
 const config = {
   printWidth: 100,
   semi: false,
-  singleQuote: true
-};
+  singleQuote: true,
+}
 
-module.exports = config;
+module.exports = config
