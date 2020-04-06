@@ -1,11 +1,12 @@
-import {parse} from "@babel/parser";
-import traverse from "@babel/traverse";
+import {IImport, NamedMember} from "import-sort-parser";
 import {
   isImportDefaultSpecifier,
   isImportNamespaceSpecifier,
   isImportSpecifier,
 } from "@babel/types";
-import {IImport, NamedMember} from "import-sort-parser";
+
+import {parse} from "@babel/parser";
+import traverse from "@babel/traverse";
 
 // TODO: Mocha currently doesn't pick up the declaration in index.d.ts
 const findLineColumn = require("find-line-column");
@@ -135,6 +136,7 @@ export function parseImports(code: string): Array<IImport> {
             });
           } else if (isImportDefaultSpecifier(specifier)) {
             imported.defaultMember = specifier.local.name;
+            // @ts-ignore. It's the original code, I don't want to mess with it
           } else if (isImportNamespaceSpecifier) {
             imported.namespaceMember = specifier.local.name;
           }
