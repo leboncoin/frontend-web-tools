@@ -5,6 +5,9 @@ module.exports = {
       category: 'Best practices',
       recommended: false,
     },
+    messages: {
+      preferNamespace: 'Unexpected “{{ sourceValue }”: prefer the use of the “rtl” namespace',
+    },
     fixable: null,
     schema: [],
     type: 'problem',
@@ -12,14 +15,17 @@ module.exports = {
 
   create: context => ({
     ImportDeclaration (node) {
-      const identifier = node.source.value
+      const sourceValue = node.source.value
 
-      if (identifier !== '@testing-library/react') return
+      if (sourceValue !== '@testing-library/react') return
 
-      context.report(
+      context.report({
         node,
-        `Unexpected “${identifier}”: prefer the use of the “rtl” namespace`
-      )
+        messageId: 'preferNamespace',
+        data: {
+          sourceValue,
+        },
+      })
     }
   }),
 }

@@ -16,7 +16,7 @@ ruleTester.run('prefer-rtl-namespace', rule, {
       `,
       errors: [
         {
-          message: 'Unexpected “@testing-library/react”: prefer the use of the “rtl” namespace',
+          messageId: 'preferNamespace',
           type: 'ImportDeclaration',
         }
       ],
