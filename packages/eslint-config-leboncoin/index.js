@@ -24,8 +24,9 @@ module.exports = {
     'sort-class-members',
     'no-constructor-bind',
     'testing-library',
+    '@typescript-eslint',
   ],
-  parser: 'babel-eslint',
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -38,6 +39,9 @@ module.exports = {
     'plugin:jest/recommended',
     'plugin:testing-library/react',
     'plugin:testing-library/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
   ],
   rules: {
     'lodash/import-scope': ['error', 'method'],
