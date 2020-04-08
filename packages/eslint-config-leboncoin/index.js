@@ -148,5 +148,10 @@ module.exports = {
     'no-constructor-bind/no-constructor-bind': 'error',
     'no-constructor-bind/no-constructor-state': 'error',
     'space-before-function-paren': 'off',
+    '@typescript-eslint/camelcase': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-empty-function': 'off',
+    '@typescript-eslint/no-use-before-define': 'off',
+    '@typescript-eslint/ban-ts-ignore': 'off',
   },
 }
