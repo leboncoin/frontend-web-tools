@@ -153,5 +153,6 @@ module.exports = {
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/ban-ts-ignore': 'off',
+    'testing-library/prefer-wait-for': 'error',
   },
 }
