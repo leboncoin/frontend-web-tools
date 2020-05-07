@@ -19,6 +19,7 @@
     "eslint-plugin-import": "2.20.1",
     "eslint-plugin-jest": "23.8.1",
     "eslint-plugin-json": "2.1.0",
+    "eslint-plugin-literal-blacklist": "0.1.1",
     "eslint-plugin-lodash": "6.0.0",
     "eslint-plugin-no-constructor-bind": "^1.2.7",
     "eslint-plugin-node": "11.0.0",

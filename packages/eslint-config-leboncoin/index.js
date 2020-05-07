@@ -17,6 +17,7 @@ module.exports = {
     'babel',
     'jest',
     'json',
+    'literal-blacklist',
     'lodash',
     'no-constructor-bind',
     'prefer-object-spread',
@@ -60,6 +61,15 @@ module.exports = {
     'default-case': 'error',
     'jest/valid-expect-in-promise': 'off',
     'jsx-quotes': 'error',
+    'literal-blacklist/literal-blacklist': [
+      'error',
+      // Add strings here you want to forbid in the code base.
+      // For example, if 'foo' is blacklisted, this expression will throw an error:
+      // const myVar = 'this is a foo text'
+      [
+        'datadoghq.eu', // datadoghq.com should be used instead
+      ],
+    ],
     'lodash/import-scope': ['error', 'method'],
     'max-len': 'off',
     'no-constructor-bind/no-constructor-bind': 'error',
