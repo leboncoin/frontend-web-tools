@@ -170,7 +170,7 @@ module.exports = {
     {
       "files": ["*.ts", "*.tsx"],
       "rules": {
-        "@typescript-eslint/explicit-function-return-type": ["error"]
+        "@typescript-eslint/explicit-function-return-type": ["warning"]
       }
     }
   ]
