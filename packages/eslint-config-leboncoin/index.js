@@ -173,6 +173,12 @@ module.exports = {
       "rules": {
         "@typescript-eslint/explicit-function-return-type": ["warn"]
       }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "react/prop-types": ["off"]
+      }
     }
   ]
 }
