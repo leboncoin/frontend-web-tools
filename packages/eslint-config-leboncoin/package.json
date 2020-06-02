@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-leboncoin",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "description": "Leboncoin's frontend eslint shareable config",
   "main": "index.js",
   "keywords": [
