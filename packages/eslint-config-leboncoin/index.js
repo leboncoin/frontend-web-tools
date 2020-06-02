@@ -167,7 +167,7 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/no-explicit-any': ["warn", { "ignoreRestArgs": true }],
     "no-unused-expressions": "off",
-    "@typescript-eslint/no-unused-expressions": ["error"]
+    "@typescript-eslint/no-unused-expressions": ["error", { "allowTernary": true, "allowShortCircuit": true }]
   },
   "overrides": [
     {
