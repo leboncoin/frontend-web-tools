@@ -165,7 +165,9 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
-    '@typescript-eslint/no-explicit-any': ["warn", { "ignoreRestArgs": true }]
+    '@typescript-eslint/no-explicit-any': ["warn", { "ignoreRestArgs": true }],
+    "no-unused-expressions": "off",
+    "@typescript-eslint/no-unused-expressions": ["error"]
   },
   "overrides": [
     {
