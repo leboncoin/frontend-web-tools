@@ -1,6 +1,6 @@
 {
   "name": "@leboncoin/lint",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Leboncoin's front lint command",
   "bin": {
     "lint": "bin/lint"
