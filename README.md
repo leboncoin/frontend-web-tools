@@ -7,7 +7,7 @@ A set of tools to ease the everyday work of the frontend developer.
 The multi-package monorepo allows:
 
 * Having the code source in one place (the git repository) for easier navigation and editing
-* Publishing of packages with a command line tool, in our case [lerna](https://lernajs.io/):
+* Publishing of packages with a command line tool, in our case [lerna](https://lerna.js.org/):
 ```
 # Install lerna globally
 npm install -g lerna

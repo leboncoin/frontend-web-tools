@@ -1,5 +1,7 @@
 # eslint-plugin-leboncoin
 
+[DEPRECATED]
+
 Leboncoin custom ESLint rules
 
 ## Installation
