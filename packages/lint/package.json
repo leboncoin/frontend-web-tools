@@ -15,6 +15,6 @@
   "author": "leboncoin",
   "license": "MIT",
   "dependencies": {
-    "package-json-validator": "0.6.1"
+    "package-json-validator": "0.6.3"
   }
 }
