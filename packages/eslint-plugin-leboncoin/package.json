@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-leboncoin",
-  "version": "0.1.7",
+  "version": "1.0.0",
   "description": "Leboncoin custom ESLint rules",
   "keywords": [
     "eslint",
