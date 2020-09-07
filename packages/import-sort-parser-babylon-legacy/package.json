@@ -1,11 +1,11 @@
 {
   "name": "@leboncoin/import-sort-parser-babylon-legacy",
-  "version": "2.0.0",
+  "version": "1.1.6",
   "description": "An import-sort parser based on the JavaScript parser Babylon with decorator legacy support.",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "prepublish": "npm run build",
+    "prepublish": "npm i && npm run build",
     "build": "tsc -p src",
     "build:watch": "tsc -p src -w",
     "test": "mocha --require ts-node/register --recursive \"test/**/*.ts\"",
