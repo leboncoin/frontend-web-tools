@@ -26,6 +26,7 @@ module.exports = {
     'sort-class-members',
     'testing-library',
     '@typescript-eslint',
+    'unicorn',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -46,6 +47,19 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
   ],
   rules: {
+    "unicorn/import-index": "error",
+    "import/extensions": [
+      "error", "never", {
+        'png': 'always',
+        'jpg': 'always',
+        'svg': 'always',
+        'mp4': 'always',
+        'spec': 'always',
+        'json': 'always',
+        'styles': 'always',
+        'scss': 'always'
+      }
+    ],
     'babel/no-invalid-this': 'error',
     'camelcase': 'off',
     'comma-dangle': [
