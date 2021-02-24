@@ -200,7 +200,10 @@ module.exports = {
     '@typescript-eslint/no-non-null-asserted-optional-chain': 'warn',
     '@typescript-eslint/no-explicit-any': ["warn", { "ignoreRestArgs": true }],
     "no-unused-expressions": "off",
-    "@typescript-eslint/no-unused-expressions": ["error", { "allowTernary": true, "allowShortCircuit": true }]
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-expressions": ["error", { "allowTernary": true, "allowShortCircuit": true }],
+    "@typescript-eslint/no-unused-vars": ["error", {"args": "after-used", "ignoreRestSiblings": true, "varsIgnorePattern": "[tT]ype" }],
+    "@typescript-eslint/explicit-module-boundary-types": 'off',
   },
   "overrides": [
     {
@@ -208,6 +211,12 @@ module.exports = {
       "rules": {
         "@typescript-eslint/explicit-function-return-type": ["warn"],
         "react/prop-types": ["off"]
+      }
+    },
+    {
+      "files": ["*.d.ts"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": ['off']
       }
     }
   ]
