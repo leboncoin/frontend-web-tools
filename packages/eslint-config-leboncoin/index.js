@@ -53,6 +53,8 @@ module.exports = {
         'png': 'always',
         'jpg': 'always',
         'svg': 'always',
+        'webp': 'always',
+        'avif': 'always',
         'mp4': 'always',
         'spec': 'always',
         'json': 'always',
