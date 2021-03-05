@@ -1,6 +1,6 @@
 {
   "name": "@leboncoin/internal-dev",
-  "version": "4.1.13",
+  "version": "4.1.14",
   "description": "Leboncoin's front web site module for development",
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
     "commitizen": "2.9.6",
     "cz-customizable": "5.2.0",
     "cz-customizable-ghooks": "leboncoin/cz-customizable-ghooks",
-    "eslint-config-leboncoin": "^3.5.6",
+    "eslint-config-leboncoin": "^3.5.7",
     "husky": "0.14.3",
     "jsonlint": "1.6.2",
     "lint-staged": "4.1.3",
