@@ -13,6 +13,11 @@ module.exports = {
   env: {
     'jest/globals': true,
   },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   plugins: [
     'babel',
     'jest',
@@ -206,6 +211,7 @@ module.exports = {
     "@typescript-eslint/no-unused-expressions": ["error", { "allowTernary": true, "allowShortCircuit": true }],
     "@typescript-eslint/no-unused-vars": ["error", {"args": "after-used", "ignoreRestSiblings": true, "varsIgnorePattern": "[tT]ype" }],
     "@typescript-eslint/explicit-module-boundary-types": 'off',
+    "array-callback-return": 'off',
   },
   "overrides": [
     {
@@ -219,6 +225,12 @@ module.exports = {
       "files": ["*.d.ts"],
       "rules": {
         "@typescript-eslint/no-unused-vars": ['off']
+      }
+    },
+    {
+      "files": ["*.spec.*"],
+      "rules": {
+        "no-import-assign": ['off']
       }
     }
   ]
