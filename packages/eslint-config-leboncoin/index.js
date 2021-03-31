@@ -64,7 +64,8 @@ module.exports = {
         'spec': 'always',
         'json': 'always',
         'styles': 'always',
-        'scss': 'always'
+        'scss': 'always',
+        'css': 'always'
       }
     ],
     'babel/no-invalid-this': 'error',
