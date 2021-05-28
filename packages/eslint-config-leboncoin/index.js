@@ -213,6 +213,9 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": ["error", {"args": "after-used", "ignoreRestSiblings": true, "varsIgnorePattern": "[tT]ype" }],
     "@typescript-eslint/explicit-module-boundary-types": 'off',
     "array-callback-return": 'off',
+    "no-restricted-properties": ["error", {
+      "property": "whyDidYouRender"
+    }]
   },
   "overrides": [
     {
