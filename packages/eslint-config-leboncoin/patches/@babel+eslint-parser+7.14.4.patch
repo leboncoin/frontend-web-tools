@@ -1,0 +1,13 @@
+diff --git a/node_modules/@babel/eslint-parser/lib/worker/babel-core.cjs b/node_modules/@babel/eslint-parser/lib/worker/babel-core.cjs
+index 5c71230..8d61739 100644
+--- a/node_modules/@babel/eslint-parser/lib/worker/babel-core.cjs
++++ b/node_modules/@babel/eslint-parser/lib/worker/babel-core.cjs
+@@ -5,7 +5,7 @@ function initialize(babel) {
+   exports.types = babel.types;
+   exports.tokTypes = babel.tokTypes;
+   exports.parseSync = babel.parseSync;
+-  exports.loadPartialConfigSync = babel.loadPartialConfigSync;
++  exports.loadPartialConfigSync = babel.loadPartialConfig;
+   exports.loadPartialConfigAsync = babel.loadPartialConfigAsync;
+   exports.createConfigItem = babel.createConfigItem;
+ }
