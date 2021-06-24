@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "eslint": "^7",
-    "mocha": "^8.1.3"
+    "mocha": "^9.0.1"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -22,6 +22,6 @@
   "license": "ISC",
   "dependencies": {
     "minimatch": "^3.0.4",
-    "read-pkg-up": "^7.0.1"
+    "read-pkg-up": "^8.0.0"
   }
 }
