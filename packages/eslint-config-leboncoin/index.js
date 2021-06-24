@@ -45,7 +45,7 @@ module.exports = {
     'plugin:jest/recommended',
     'plugin:react/recommended',
     'plugin:testing-library/react',
-    'plugin:testing-library/recommended',
+    'plugin:testing-library/dom',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier',

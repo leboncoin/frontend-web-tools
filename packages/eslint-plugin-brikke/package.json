@@ -22,6 +22,6 @@
   "license": "ISC",
   "dependencies": {
     "minimatch": "^3.0.4",
-    "read-pkg-up": "^8.0.0"
+    "read-pkg-up": "^7.0.1"
   }
 }
