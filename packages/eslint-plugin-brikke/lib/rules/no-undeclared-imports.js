@@ -74,7 +74,7 @@ module.exports = {
         return
       }
       if (
-        excludedModules.some(pattern => sourceValue.includes(pattern))
+        excludedModules.some(pattern => pattern instanceof RegExp ? pattern.test(sourceValue) : sourceValue === pattern)
       ) {
         return
       }
