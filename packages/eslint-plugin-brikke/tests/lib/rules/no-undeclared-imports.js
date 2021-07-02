@@ -45,6 +45,10 @@ ruleTester.run('no-undeclared-imports', rule, {
       code: "import foo from '../bar'",
       options: [getOptions()],
     },
+    {
+      code: "import foo from '$src/foo'",
+      options: [{ ...getOptions(), excludedModules: [/^\$src\//] }],
+    },
     // builtin modules
     {
       code:
