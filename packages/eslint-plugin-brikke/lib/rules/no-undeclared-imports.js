@@ -73,7 +73,9 @@ module.exports = {
       if (isBuiltin(sourceValue)) {
         return
       }
-      if (excludedModules.includes(sourceValue)) {
+      if (
+        excludedModules.some(pattern => sourceValue.includes(pattern))
+      ) {
         return
       }
       if (
