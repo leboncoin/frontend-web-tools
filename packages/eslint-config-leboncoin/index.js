@@ -211,6 +211,7 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": ["warn", { ignoreRestArgs: true }],
     "no-unused-expressions": "off",
     "no-unused-vars": "off",
+    "testing-library/render-result-naming-convention": "off",
     "@typescript-eslint/no-unused-expressions": [
       "error",
       { allowTernary: true, allowShortCircuit: true },
