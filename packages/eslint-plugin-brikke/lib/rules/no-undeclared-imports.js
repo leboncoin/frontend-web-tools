@@ -1,6 +1,7 @@
 const builtin = require('module').builtinModules
 const readPkgUp = require('read-pkg-up')
 const minimatch = require('minimatch')
+const fs = require('fs')
 
 const isBuiltin = name => {
   return builtin.includes(name)
@@ -41,7 +42,8 @@ module.exports = {
     fixable: null,
     messages: {
       undeclaredImports:
-        "Unexpected '{{ sourceValue }}' is imported but not declared in the leaf package.json",
+        "Unexpected '{{ sourceValue }}' (dependency type: {{ dependencyType }}) " +
+        "is imported but not declared in the leaf package.json",
     },
     schema: [
       {
@@ -50,6 +52,7 @@ module.exports = {
           excludedModules: { type: ['array'] },
           excludedFilePatterns: { type: ['array'] },
           pkgDir: { type: ['string'] },
+          packageBlueprintFile: { type: ['string'] },
         },
         additionalProperties: false,
       },
@@ -59,7 +62,9 @@ module.exports = {
   create: context => ({
     ImportDeclaration (node) {
       const options = context.options[0] || {}
-      const { excludedModules = [], excludedFilePatterns = [] } = options
+      const { excludedModules = [], excludedFilePatterns = [], packageBlueprintFile = '' } = options
+      let dependenciesBlueprint
+      let devDependenciesBlueprint
       const filename = context.getFilename()
       const cwd = options.pkgDir || filename
       const pkg = readPkgUp.sync({ cwd, normalize: false }).packageJson
@@ -69,6 +74,18 @@ module.exports = {
         ...(pkg.peerDependencies || {}),
       }
       const sourceValue = node.source.value
+
+      if (packageBlueprintFile !== '') {
+        try {
+          if (fs.existsSync(packageBlueprintFile)) {
+            const packageBlueprint = require(packageBlueprintFile)
+            dependenciesBlueprint = Object.keys(packageBlueprint.dependencies || [])
+            devDependenciesBlueprint = Object.keys(packageBlueprint.devDependencies || [])
+          }
+        } catch(err) {
+          console.error(err)
+        }
+      }
 
       if (isBuiltin(sourceValue)) {
         return
@@ -95,11 +112,20 @@ module.exports = {
         return
       }
 
+      let dependencyType = 'unknown'
+
+      if (dependenciesBlueprint.includes(sourceValue)) {
+        dependencyType = 'dependency'
+      } else if (devDependenciesBlueprint.includes(sourceValue)) {
+        dependencyType = 'devDependency'
+      }
+
       context.report({
         node,
         messageId: 'undeclaredImports',
         data: {
           sourceValue,
+          dependencyType,
         },
       })
     },
