@@ -63,8 +63,8 @@ module.exports = {
     ImportDeclaration (node) {
       const options = context.options[0] || {}
       const { excludedModules = [], excludedFilePatterns = [], packageBlueprintFile = '' } = options
-      let dependenciesBlueprint
-      let devDependenciesBlueprint
+      let dependenciesBlueprint = []
+      let devDependenciesBlueprint = []
       const filename = context.getFilename()
       const cwd = options.pkgDir || filename
       const pkg = readPkgUp.sync({ cwd, normalize: false }).packageJson
