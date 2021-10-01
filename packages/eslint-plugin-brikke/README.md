@@ -35,13 +35,32 @@ Then configure the rules you want to use under the rules section.
 
 ```json
 {
-    "rules": {
-        "brikke/rule-name": ["off|warning|error"]
-    }
+  "rules": {
+    "brikke/rule-name": ["off|warning|error"]
+  }
 }
 ```
 
 ## Supported Rules
 
-* no-css-dist
-* no-undeclared-imports
+### no-css-dist
+
+### no-undeclared-imports
+
+```js
+// .eslintrc.js
+module.exports = {
+  rules: {
+    'brikke/no-undeclared-imports': [
+      'error',
+      {
+        excludedFilePatterns: ['*.spec.js', '*.spec.tsx', '*.spec.ts', '*.stories.js'],
+        excludedModules: [/^\$src\//, '$config', /@brikke\/[^/]+\/dist\/.+/],
+        // Path to a package.json containing a list of dependencies and/or devDependencies
+        // to give a hint about about what type of dependency has been reported
+        packageBlueprintFile: './foo/bar/package.json',
+      },
+    ],
+  },
+}
+```
